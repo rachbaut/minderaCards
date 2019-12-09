@@ -8,6 +8,13 @@ body {
     background-color: #f1f1f1;
 }
 
+/* CONTAINER STYLES */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* CARD STYLES */
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -15,6 +22,7 @@ body {
     text-align: center;
     width: 308px;
     height: 323px;
+    
 }
 
 .column {
@@ -24,7 +32,8 @@ body {
 }
 
 .row {
-    margin: 0;
+    margin-left: auto;
+    
 }
 
 .row:after {
@@ -36,7 +45,10 @@ body {
 
 /* CARD IMG STYLES */
 
-
+.card-img {
+    width: 308px;
+    height: 133px;
+}
 
 /* CARD MAIN STYLES */
 
