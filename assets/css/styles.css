@@ -1,12 +1,38 @@
+/* OVERALL BACKGROUND STYLES */
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 26px;
-    color: #F6F6F6;
+    background-color: #f1f1f1;
 }
 
 /* CARD STYLES */
 .card {
-    line-height: 19px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    width: 308px;
+    height: 323px;
 }
+
+.column {
+    float: left;
+    width: 33%;
+    padding: 13px;
+}
+
+.row {
+    margin: 0;
+}
+
+.row:after {
+    
+    display: table;
+    clear: both;
+}
+
 
 /* CARD IMG STYLES */
 
@@ -23,3 +49,14 @@ body {
 
 
 /* CARD DESCRIPTION STYLES */
+
+
+
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 26px;
+    }
+}
