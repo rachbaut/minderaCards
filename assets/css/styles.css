@@ -4,7 +4,6 @@
 }
 
 body {
-    
     background-color: #f1f1f1;
 }
 
@@ -13,7 +12,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 1080px;
+    max-width: 1028px;
     margin: 0 auto;
 }
 
@@ -23,7 +22,6 @@ body {
     text-align: center;
     width: 308px;
     height: 323px;
-    
 }
 
 .column {
@@ -54,17 +52,51 @@ img {
     background-position: 50% 50%;
     
 }
-/* CARD MAIN STYLES */
+/* CARD INFO STYLES */
 
+.card-info {
+    padding: 26px;
+    line-height: 19px;
+}
 
+.card-info-header {
+    line-height: 19px;
+}
 
+.card-info-title {
+    text-align: right;
+    font-size: 23px;
+    color: #3A3A3A; 
+    font-family: Arial;
+    font-weight: bold;
 
-/* CARD TITLE STYLES */
+}
 
+.card-info-subtitle {
+    text-align: right;
+    font-size: 12px;
+    color: #ADADAD;
+    font-family: Arial;
+    font-weight: bold;
+}
 
+.card-info-description {
+   font-size: 12px;
+   line-height: 1.583;
+   color: #3A3A3A;
+   font-family: Arial;
+   text-align: left;
+}
 
+.card-info-link {
+    font-size: 16px;
+    color: #2DA936;
+    font-family: Arial;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 26px;
+}
 
-/* CARD DESCRIPTION STYLES */
 
 
 
@@ -72,6 +104,14 @@ img {
 @media screen and (max-width: 600px) {
     .column {
         width: 100%;
+        display: block;
+        margin-bottom: 26px;
+    }
+}
+
+@media screen and (max-width: 978px) {
+    .column {
+        width: 50%;
         display: block;
         margin-bottom: 26px;
     }
