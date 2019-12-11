@@ -9,58 +9,21 @@
     <title>Mindera Cards</title>
 </head>
 
-<body>
-    <div class="row">
+<body onload="loadData()">
+    <div class="container">
+        <div class="row" id="card-container">
 
-        <div class="column">
-            <div class="card">
-                <div class="card-img">Image</div>
-                <div class="card-info">
-                    <row class="card-info-header">
-                        <div class="card-info-title">We are Humans</div>
-                        <div class="card-info-subtitle">WHAT WILL YOU FIND HERE</div>
-                    </row>
-                    <div class="card-info-description">We act like humans, we talk like humans and we
-                        think like humans. And we call out anyone who
-                        does the opposite.</div>
-                </div>
-                <div class="card-info-link">Learn More</div>
-            </div>
         </div>
 
-        <div class="column">
-            <div class="card">
-                <div class="card-img">Image</div>
-                <div class="card-info">
-                    <row class="card-info-header">
-                        <div class="card-info-title">We are Humans</div>
-                        <div class="card-info-subtitle">WHAT WILL YOU FIND HERE</div>
-                    </row>
-                    <div class="card-info-description">We act like humans, we talk like humans and we
-                        think like humans. And we call out anyone who
-                        does the opposite.</div>
-                </div>
-                <div class="card-info-link">Learn More</div>
-            </div>
+        <div class="row">
+            <div class="column left" onclick="onLeftButtonClick()"><</div>
+            <div class="column right" onclick="onRightButtonClick()">></div>
         </div>
-
-        <div class="column">
-            <div class="card">
-                <div class="card-img">Image</div>
-                <div class="card-info">
-                    <row class="card-info-header">
-                        <div class="card-info-title">We are Humans</div>
-                        <div class="card-info-subtitle">WHAT WILL YOU FIND HERE</div>
-                    </row>
-                    <div class="card-info-description">We act like humans, we talk like humans and we
-                        think like humans. And we call out anyone who
-                        does the opposite.</div>
-                </div>
-                <div class="card-info-link">Learn More</div>
-            </div>
-        </div>
-
+        
     </div>
+    
+    <script src="assets/js/index.js"></script>
+
 </body>
 
 </html>
