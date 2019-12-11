@@ -32,7 +32,6 @@ body {
 
 
 .row:after {
-    
     display: table;
     clear: both;
 }
@@ -86,6 +85,8 @@ img {
    color: #3A3A3A;
    font-family: Arial;
    text-align: left;
+   max-height: 76px;
+    overflow: none;
 }
 
 .card-info-link {

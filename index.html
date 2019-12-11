@@ -9,17 +9,17 @@
     <title>Mindera Cards</title>
 </head>
 
-<body onload="loadData()">
+<body onload="loadCardData()">
     <div class="container">
         <div class="row" id="card-container">
 
         </div>
 
         <div class="row">
-            <div class="column left" onclick="onLeftButtonClick()"><</div>
-            <div class="column right" onclick="onRightButtonClick()">></div>
+            <div class="column" id="leftArrow" onclick="onLeftButtonClick()"><</div>
+            <div class="column" id="rightArrow" onclick="onRightButtonClick()">></div>
         </div>
-        
+
     </div>
     
     <script src="assets/js/index.js"></script>

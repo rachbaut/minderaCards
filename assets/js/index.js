@@ -1,12 +1,43 @@
+//global variables
 
-//define a function
+var cardToDisplay = 3;
+//initial variables
+var start = 0;
+var end = cardToDisplay;
+var isRightArrowClickable = true;
+var isLeftArrowClickable = false;
 
-var loadData = async function() {
-    //loading data
-    var response = await fetch('http://localhost:3000/cards');
-    var data = await response.json(); //data = list of cards
+async function loadCardData() {
     
-    for (var i = 0; i < 3; i++) {
+    //loading data
+    var response = await fetch(`http://localhost:3000/cards?_start=${start}&&_end=${end}`);
+    var data = await response.json(); //data = list of cards
+    if (start > 0) {
+        isLeftArrowClickable = true;
+        isRightArrowClickable = true;
+    }
+    if (!data || !data.length) {
+        if (start < 0) {
+            //disable button
+            start = 0
+            end = cardToDisplay
+            isLeftArrowClickable = false
+            
+        } else {
+            isRightArrowClickable = false;
+        }
+        return;
+    }
+    displayCardData(data);
+} 
+
+
+
+ function displayCardData(data) {
+    if(!data || !data.length) return;
+    var container = document.getElementById('card-container');
+    container.innerHTML = "";
+     for (var i = 0; i < data.length; i++) {
        
         var cardData = data[i];
         
@@ -24,8 +55,7 @@ var loadData = async function() {
              </div>
          </div>`
         var toAppend = htmlToElements(card); //turn into a node 
-        var container = document.getElementById('card-container');
-       
+        
         container.appendChild(toAppend[0]);
     }
     
@@ -40,13 +70,27 @@ function htmlToElements(html) {
 }
 
 
-//
+
+//on click events, slider
+
+
 function onLeftButtonClick() {
-    console.log("left button clicked")
+    //if button clicked call loadCardData
+    if (!isLeftArrowClickable) return;
+    end = start
+    start = start - cardToDisplay
+    
+    loadCardData()
+    
+    
 }
 
 function onRightButtonClick() {
-    console.log("right clicked")
+    if (!isRightArrowClickable) return;
+    start = end
+    end = end + cardToDisplay
+    loadCardData()
+    
 }
 
 
