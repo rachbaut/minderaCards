@@ -153,18 +153,25 @@ img {
 
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 667px) {
     .column {
         width: 100%;
         display: block;
-        margin-bottom: 26px;
+        padding-bottom: 26px;
+       
+    }
+
+    .card {
+        display: block;
+        margin: 0 auto;
     }
 }
 
-@media screen and (max-width: 978px) {
+@media screen and (min-width: 668px) and (max-width: 978px) {
     .column {
         width: 50%;
         display: block;
-        margin-bottom: 26px;
+        padding-bottom: 26px;
+      
     }
 }
