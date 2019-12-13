@@ -9,21 +9,25 @@
     <title>Mindera Cards</title>
 </head>
 
-<body onload="loadCardData()">
+<body onload="cardProject.loadCardData()">
     <div class="container">
         <div class="row" id="card-container">
 
         </div>
 
-        <div class="row">
-            <div class="column" id="leftArrow" onclick="onLeftButtonClick()"><</div>
-            <div class="column" id="rightArrow" onclick="onRightButtonClick()">></div>
-        </div>
-
+        
     </div>
+
+    <div class="row_arrow">
+        <div class="column_arrowLeft" id="leftArrow" onclick="cardProject.onLeftButtonClick()"><</div>
+        <div class="column_arrowRight" id="rightArrow" onclick="cardProject.onRightButtonClick()">></div>
+    </div>
+
     
     <script src="assets/js/index.js"></script>
 
 </body>
 
 </html>
+
+

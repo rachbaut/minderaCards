@@ -1,0 +1,22 @@
+{
+  "name": "minderacards",
+  "version": "1.0.0",
+  "description": "Exercise aimed to build a component that displays content using the card design pattern.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --passWithNoTests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rachbaut/minderaCards.git"
+  },
+  "author": "Rachel B",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rachbaut/minderaCards/issues"
+  },
+  "homepage": "https://github.com/rachbaut/minderaCards#readme",
+  "dependencies": {
+    "jest": "^24.9.0"
+  }
+}
