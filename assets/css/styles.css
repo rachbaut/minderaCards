@@ -124,7 +124,7 @@ img {
     left: 26px;
 }
 
-/*Arrow Styles */
+/* ARROW STYLES */
 .row_arrow {
     display: table;
     clear: both;
@@ -151,8 +151,17 @@ img {
     font-size: 30px;
 }
 
+.column_arrowLeft:hover {
+    cursor: pointer;
+}
+
+.column_arrowRight:hover {
+    cursor: pointer;
+}
 
 
+
+/* MEDIA QUERIES */
 @media screen and (max-width: 667px) {
     .column {
         width: 100%;

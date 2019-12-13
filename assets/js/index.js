@@ -1,15 +1,14 @@
-//global variables
+
 var cardProject = function () {
+    //global variables 
     var cardToDisplay = 3;
-    //initial variables
     var start = 0;
     var end = cardToDisplay;
     var isRightArrowClickable = true;
     var isLeftArrowClickable = false;
 
+    //loading the card info from json array
     async function loadCardData() {
-
-        //loading data
         try {
             var response = await fetch(`http://localhost:3000/cards?_start=${start}&&_end=${end}`);
             var data = await response.json(); //data = list of cards
@@ -19,7 +18,7 @@ var cardProject = function () {
             }
             if (!data || !data.length) {
                 if (start < 0) {
-                    //disable button
+                    //disable arrows when no more card data is given
                     start = 0
                     end = cardToDisplay
                     isLeftArrowClickable = false
@@ -38,14 +37,15 @@ var cardProject = function () {
     }
 
 
-
+    //display all the card data on the browser
     function displayCardData(cardList, cardHtmlElement) {
         if (!cardList || !cardList.length || !cardHtmlElement) return;
         cardHtmlElement.innerHTML = "";
         
         for (var i = 0; i < cardList.length; i++) {
             var cardData = cardList[i];
-            var cardText = cardData.text; 
+            var cardText = cardData.text;
+            //if statement to control overflow of description text in cards  
             if (cardText && cardText.length > 134) {
                 cardText = cardText.substring(0, 134) + '...';
             }
@@ -81,12 +81,12 @@ var cardProject = function () {
         return template.content.childNodes;
     }
 
+    //click events for the arrows
     function onLeftButtonClick() {
-        //if button clicked call loadCardData
         if (!isLeftArrowClickable) return;
         end = start
         start = start - cardToDisplay
-        loadCardData()
+        loadCardData();
 
     }
 
@@ -98,6 +98,7 @@ var cardProject = function () {
 
     }
 
+    //exposing functions and variables to index.test.js for unit testing
     return {
         loadCardData,
         displayCardData,

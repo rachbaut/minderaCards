@@ -72,7 +72,6 @@ describe('card project', function () {
     })
     describe('displayCardData', function () {
         it('should not display card data if data given is null or empty', function () {
-            // check to see how jest can mock the DOM 
             const element = document.createElement('div');
             expect(element).not.toBeNull();
             cardProject.displayCardData(null, element);
@@ -80,7 +79,6 @@ describe('card project', function () {
         })
     
         it('should display card data if given the correct data', function () {
-            // check to see how jest can mock the DOM 
             var element = document.createElement('div');
             expect(element).not.toBeNull();
             document.body.append(element);
@@ -100,7 +98,7 @@ describe('card project', function () {
             clone.onLeftButtonClick();
             expect(clone.start).toBe(0);
             expect(clone.end).toBe(3);
-            expect(clone.loadCardData).not.toHaveBeenCalled()
+            expect(clone.loadCardData).not.toHaveBeenCalled();
         })
     })
       
